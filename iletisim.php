@@ -13,75 +13,88 @@
   
   
   <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-      <div id="menu" class="collapse navbar-collapse justify-content-center">
-        <ul class="navbar-nav">
-          <li class="nav-item"> <a href="#"class="nav-link ml-4 text-white">Anasayfa</a> </li>
-          <li class="nav-item"><a href="#"class="nav-link ml-4 text-white">Özgeçmiş</a></li>
-          <li class="nav-item"> <a href="#"class="nav-link ml-4 text-white">İstanbul</a> </li>
-          <li class="nav-item"> <a href="#"class="nav-link ml-4 text-white">Mirasımız</a> </li>
-          <li class="nav-item"> <a href="#"class="nav-link ml-4 text-white">İlgi Alanlarım</a> </li>
-          <li class="nav-item"> <a href="#"class="nav-link ml-4 text-white">Login</a> </li>
-          <li class="nav-item"> <a href="#"class="nav-link ml-4 text-white">İletişim</a> </li>
-          
-          
-        </ul>
-      </div>
-      
-    </nav>
 
-    <div id="container">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 
-<div class="row" style="margin: 0px;">
-    <div class="col-sm-4" ></div>
-    <div class="col-sm-4">
-        <?php
-                echo "....Hoşgeldiniz.... !";
-                echo "<br/><br/>";
-                echo "KİŞİSEL BİLGİLERİNİZ ";
-                echo "<br/><br/>";
-                $adi = $_POST["adi"];
-                echo " Adınız ve soyadınız : <b> $adi </b> ";
-                echo "<br/>";
-                $cinsiyet = $_POST["cinsiyet"];
-                echo "Cinsiyetiniz : <b> $cinsiyet </b>";
-                echo "<br/>";
-                $yas = $_POST["yas"];
-                echo "Yaş Aralığınız : <b> $yas </b>";
-                echo "<br/>";
-                $egitim = $_POST["egitim"];
-                echo "Eğitim Durumunuz : <b> $egitim </b>";
-                echo "<br/>";
-                if(isset($_POST["dil"])) {
-                    $diller = $_POST["dil"];
-                 
-                    echo 'Seçtiğiniz yabancı diller : <br/>';
-                 
-                    foreach($diller as $dil) {
-                        echo ' * ' . $dil. ' <br/>';
-                    }
-                } else {
-                    echo 'Hiç yabancı dil  seçmediniz.';
-                }
-                $dosya = $_POST["dosya"];
-                echo "Dosya Yolu : <b> $dosya </b>";
-                echo "<br/>";
-                print"<img src=\"$dosya\" width=\"100px\" height=\"100px\"\/>";
-                echo "<br/>";
-                $tel = $_POST["tel"];
-                echo " Telefon Numaranız : <b> $tel </b>";
-                echo "<br/>";
-                $email = $_POST["email"];
-                echo " E-Mail Adresiniz : <b> $email </b>";
-                echo "<br/>";
-                $adres = $_POST["adres"];
-                echo " Adresiniz :<b> $adres </b>";
-                echo "<br/>";
+<a href="index.html" class="navbar-brand"><img class="mr-3" src="img/logo.jpg" style="width: 60px;;"><i style="color: indianred;">Yasemin ve İstanbul</i></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div id="menu" class="collapse navbar-collapse justify-content-center">
+    <ul class="navbar-nav">
+
+        <li class="nav-item"> <a href="index.html"class="nav-link text-white">Anasayfa</a> </li>
+        <li class="nav-item"> <a href="#"class="nav-link text-white">Özgeçmiş</a></li>
+        <li class="nav-item"> <a href="#"class="nav-link  text-white">İstanbul</a> </li>
+        <li class="nav-item"> <a href="mirasımız.html"class="nav-link  text-white">Mirasımız</a> </li>
+        <li class="nav-item"> <a href="#"class="nav-link text-white">İlgi Alanlarım</a> </li>
+        <li class="nav-item"> <a href="#"class="nav-link  text-white">Login</a> </li>
+        <li class="nav-item"> <a href="iletisim.html"class="nav-link  text-white">İletişim</a> </li>
+   
+    </ul>
+</div>
+</nav>
+
+
+<div id="all" style="height:100%">
 
 
 
-        ?>
+<div id="container">
 
+  <div class="row" style="margin: 0px;">
+      <div class="col-sm-4" ></div>
+      <div class="col-sm-4" style=" margin-top: 80px ;background-color: rgb(137, 226, 241); opacity: 0.8;">
+          <?php
+                  echo "....Hoşgeldiniz.... !";
+                  echo "<br/><br/>";
+                  echo "KİŞİSEL BİLGİLERİNİZ ";
+                  echo "<br/><br/>";
+                  $adi = $_POST["adi"];
+                  echo " Adınız ve soyadınız : <b> $adi </b> ";
+                  echo "<br/>";
+                  $cinsiyet = $_POST["cinsiyet"];
+                  echo "Cinsiyetiniz : <b> $cinsiyet </b>";
+                  echo "<br/>";
+                  $yas = $_POST["yas"];
+                  echo "Yaş Aralığınız : <b> $yas </b>";
+                  echo "<br/>";
+                  $egitim = $_POST["egitim"];
+                  echo "Eğitim Durumunuz : <b> $egitim </b>";
+                  echo "<br/>";
+                  if(isset($_POST["dil"])) {
+                      $diller = $_POST["dil"];
+                   
+                      echo 'Seçtiğiniz yabancı diller : <br/>';
+                   
+                      foreach($diller as $dil) {
+                          echo " <b> $dil </b> ";
+                          echo "<br/>";
+                      }
+                  } else {
+                      echo "Hiç yabancı dil  seçmediniz.";
+                      echo "<br/>";
+                  }
+                  $tel = $_POST["tel"];
+                  echo " Telefon Numaranız : <b> $tel </b>";
+                  echo "<br/>";
+                  $email = $_POST["email"];
+                  echo " E-Mail Adresiniz : <b> $email </b>";
+                  echo "<br/>";
+                  $adres = $_POST["adres"];
+                  echo " Adresiniz :<b> $adres </b>";
+                  echo "<br/>";
+  
+  
+  
+          ?>
+
+
+
+        </div>
+    </div>
+</div>
+</div>
     
 
        <!-- Optional JavaScript; choose one of the two! -->

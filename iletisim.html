@@ -45,7 +45,7 @@
             <div class="row" style="margin: 0px;">
                 <div class="col-sm-4" ></div>
                 <div class="col-sm-4">
-                    <form name="iletisimformu" action="#" onsubmit="return (formKontrol())" method="POST">
+                    <form name="iletisimformu" action="iletisim.php" onsubmit="return formKontrol()" method="POST">
                     <fieldset style="font-size: large; color:darkgrey">
                         <legend>KİŞİSEL BİLGİLER</legend>
                             <table> 
@@ -76,28 +76,28 @@
                                     <th>Eğitim Durumu:</th>
                                     <td><select name="egitim">
                                         <option value="">Eğitim Durumunuz</option>
-                                        <option value="ilk">İlkokul</option>    
-                                        <option value="orta">Ortaokul</option>
-                                        <option value="lise">Lise</option>
-                                        <option value="lisans">Lisans</option>
-                                        <option value="ylisans">Yüksek Lisans</option>    
+                                        <option name="ilk">İlkokul</option>    
+                                        <option name="orta">Ortaokul</option>
+                                        <option name="lise">Lise</option>
+                                        <option name="lisans">Lisans</option>
+                                        <option name="ylisans">Yüksek Lisans</option>    
                                     </select><br>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Yabancı Dil :</th>
                                     <td colspan="5">
-                                    <input type="checkbox" name="dil[]">İngilizce <br>
-                                    <input type="checkbox" name="dil[]">Fransızca <br>
-                                    <input type="checkbox" name="dil[]">Almanca <br>
-                                    <input type="checkbox" name="dil[]">Arapça <br>                
-                                    <input type="checkbox" name="dil[]">İtalyanca <br>
+                                    <input type="checkbox" name="dil[]" value="İngilizce">İngilizce <br>
+                                    <input type="checkbox" name="dil[]" value="Fransızca">Fransızca <br>
+                                    <input type="checkbox" name="dil[]" value="Almanca">Almanca <br>
+                                    <input type="checkbox" name="dil[]" value="Arapça">Arapça <br>                
+                                    <input type="checkbox" name="dil[]" value="İtalyanca">İtalyanca <br>
                                     <br>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Fotoğraf:</th>
-                                    <td><input type="file" accept="image" id="dosya"></td><br>
+                                    <td><input type="file" accept="image" id="dosya" name="dosya" ></td><br>
                                 </tr>
                             </table>                        
                     </fieldset>
@@ -168,27 +168,24 @@
         }
 
         if(document.iletisimformu.email.value==""){
-            uyariMesaji+=("Lütfen e-mailinizi giriniz !\n");
+            uyariMesaji+=("Lütfen e-mailinizi giriniz !\n")
 
         }
         
         if(document.iletisimformu.adres.value==""){
             uyariMesaji+=("Lütfen adresinizi giriniz !\n");
         }
-        if(uyarıMesaji!=""){
+        if(uyariMesaji.length != 0){
             window.alert(uyariMesaji);
             return false;
         }
-
-        return true;
-        
-
-      
+        else{
+            return true;
+        }
     }
    
         
     </script>
-
 
  
 
