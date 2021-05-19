@@ -33,16 +33,15 @@
     
 }
 
-.jumbotron 
-{
-	padding-top: 200px;
-}
 
-.mirasimiz-jumbotron
+.jumbotron
 {
-	background-image: url(img/boğaziçi.jpg);
 	background-size: cover;
-	background-position: 50% 40%;
+	padding: 3%;
+	background-color: indianred;
+	margin-top: 150px;
+	margin-bottom: 50px;
+
 }
 
 .col-sm-8
