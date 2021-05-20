@@ -34,11 +34,21 @@
 }
 
 
-.jumbotron
+.mirasimizJumbotron
 {
 	background-size: cover;
 	padding: 3%;
 	background-color: indianred;
+	margin-top: 150px;
+	margin-bottom: 50px;
+
+}
+
+.ilgiAlanlarimJumbotron
+{
+	background-size: cover;
+	padding: 3%;
+	background-color: rgb(70, 121, 134);
 	margin-top: 150px;
 	margin-bottom: 50px;
 
