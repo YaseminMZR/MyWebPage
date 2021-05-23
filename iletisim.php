@@ -15,6 +15,7 @@
   
   <body>
 
+
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
 
 <a href="index.html" class="navbar-brand"><img class="mr-3" src="img/logo.jpg" style="width: 60px;;"><i style="color: indianred;">Yasemin ve İstanbul</i></a>
@@ -22,30 +23,52 @@
   <span class="navbar-toggler-icon"></span>
 </button>
 <div id="menu" class="collapse navbar-collapse justify-content-center">
-    <ul class="navbar-nav">
+  <ul class="navbar-nav">
 
-        <li class="nav-item"> <a href="index.html"class="nav-link text-white">Anasayfa</a> </li>
-        <li class="nav-item"> <a href="özgeçmiş.html"class="nav-link text-white">Özgeçmiş</a></li>
-        <li class="nav-item"> <a href="#"class="nav-link  text-white">İstanbul</a> </li>
-        <li class="nav-item"> <a href="mirasımız.html"class="nav-link  text-white">Mirasımız</a> </li>
-        <li class="nav-item"> <a href="ilgiAlanlarım.html"class="nav-link text-white">İlgi Alanlarım</a> </li>
-        <li class="nav-item"> <a href="login.html"class="nav-link  text-white">Giriş</a> </li>
-        <li class="nav-item"> <a href="iletisim.html"class="nav-link  text-white">İletişim</a> </li>
+    <li class="nav-item"> <a href="index.html"class="nav-link text-white">Anasayfa</a> </li>
+    <li class="nav-item"> <a href="özgeçmiş.html"class="nav-link text-white">Özgeçmiş</a></li>
+    <li class="nav-item dropdown">
+       <a href="istanbul.html"class="nav-link dropdown-toggle  text-white" data-bs-toggle="dropdown">İstanbul</a>
+       <div class="dropdown-menu">
+         <a href="istanbul.html"class="dropdown-item">İstanbul</a>
+         <a href="ayasofya.html" class="dropdown-item">Ayasofya Camii</a>
+         <a href="kızKulesi.html" class="dropdown-item">Kız Kulesi</a>
+         <a href="galataKulesi.html" class="dropdown-item">Galata Kulesi</a>
+         <a href="yerebatan.html" class="dropdown-item">Yerebatan Sarnıcı </a>  
+       </div>
+    </li>
+    <li class="nav-item"> <a href="mirasımız.html"class="nav-link  text-white">Mirasımız</a> </li>
+    <li class="nav-item"> <a href="ilgiAlanlarım.html"class="nav-link text-white">İlgi Alanlarım</a> </li>
+    <li class="nav-item"> <a href="login.html"class="nav-link  text-white">Giriş</a> </li>
+    <li class="nav-item"> <a href="iletisim.html"class="nav-link  text-white">İletişim</a> </li>
    
-    </ul>
+  </ul>
 </div>
 </nav>
 
+<header>
 
-<div id="all" style="height:100%">
+  <div class=" text-white jumbotron iletisimJumbotron">
 
+    <div class="container">
 
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 font-italic">
+        <i>Kaydınızı Oluşturduk.</i>
+        </h1>
+     </div>
+
+    </div>
+
+  </div>
+
+</header>
 
 <div id="container">
 
   <div class="row" style="margin: 0px;">
-      <div class="col-sm-4" ></div>
-      <div class="col-sm-4" style=" margin-top: 80px ;background-color: rgb(137, 226, 241); opacity: 0.8;">
+      <div class="col-sm-2"> </div>
+      <div class="col-sm-8"style="background-color:rgb(76, 136, 136);">
           <?php
                   echo "....Hoşgeldiniz.... !";
                   echo "<br/><br/>";
@@ -86,15 +109,12 @@
                   echo " Adresiniz :<b> $adres </b>";
                   echo "<br/>";
   
-  
-  
           ?>
 
-
-
         </div>
+          
     </div>
-</div>
+  </div>
 </div>
     
 
